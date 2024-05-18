@@ -1,0 +1,293 @@
+1. Gui
+2. Joins
+3. Consraints / Function
+4. Procedure
+5. Delete 
+
+------------------------------------------------------------------
+
+GUI : Graphical user interface used to create windows application in python for windows application python has one module tkinter has no of classes to create windows applications.
+
+Tk()
+Button()
+Label()
+Entry()
+
+from tkinter import *
+frame = Tk()
+frame.mainloop()
+
+
+from tkinter import *
+frame = Tk()
+frame.geometry("500x300")
+frame.title("Main Frame")
+frame.mainloop()
+
+
+from tkinter import *
+frame = Tk()
+frame.geometry("500x300")
+frame.title("Main Frame")
+b = Button(frame,text="Click Me")
+b.pack()
+frame.mainloop()
+
+
+from tkinter import *
+frame = Tk()
+frame.geometry("500x300")
+frame.title("Main Frame")
+l1 = Label(frame,text="Main Frame",font=('Arial',30))
+b = Button(frame,text="Click Me")
+l1.pack()
+b.pack()
+frame.mainloop()
+
+from tkinter import *
+frame = Tk()
+frame.geometry("500x300")
+frame.title("Main Frame")
+l1 = Label(frame,text="Main Frame",font=('Arial',30),fg="red")
+b = Button(frame,text="Click Me")
+l1.pack()
+b.pack()
+frame.mainloop()
+
+
+from tkinter import *
+frame = Tk()
+frame.geometry("500x300")
+frame.title("Main Frame")
+l1 = Label(frame,text="Main Frame",font=('Arial',30),fg="red")
+l2 = Label(frame,text="Enter Email")
+l3 = Label(frame,text="Enter Password")
+t1 = Entry(frame,width=20)
+t2 = Entry(frame,width=30)
+
+b = Button(frame,text="Click Me")
+l1.pack()
+l2.pack()
+t1.pack()
+l3.pack()
+t2.pack()
+b.pack()
+frame.mainloop()
+
+
+from tkinter import *
+from tkinter import messagebox
+frame = Tk()
+frame.geometry("500x300")
+frame.title("Main Frame")
+l1 = Label(frame,text="Main Frame",font=('Arial',30),fg="red")
+l2 = Label(frame,text="Enter Email")
+l3 = Label(frame,text="Enter Password")
+t1 = Entry(frame,width=20)
+t2 = Entry(frame,width=30)
+def Test():
+    messagebox.showinfo("Information","Button Click")
+b = Button(frame,text="Click Me",command=Test)
+l1.pack()
+l2.pack()
+t1.pack()
+l3.pack()
+t2.pack()
+b.pack()
+frame.mainloop()
+
+
+from tkinter import *
+from tkinter import messagebox
+frame = Tk()
+frame.geometry("500x300")
+frame.title("Main Frame")
+l1 = Label(frame,text="Main Frame",font=('Arial',30),fg="red")
+l2 = Label(frame,text="Enter Email")
+l3 = Label(frame,text="Enter Password")
+t1 = Entry(frame,width=20)
+t2 = Entry(frame,width=30,show="*")
+def Test():
+    Email = t1.get()
+    Pass = t2.get()
+    if(Email == "Ducat@gmail.com" and Pass=="1234"):
+        messagebox.showinfo("Information","Login")
+    else:
+        messagebox.showinfo("Information","Failed")
+b = Button(frame,text="Click Me",command=Test)
+l1.pack()
+l2.pack()
+t1.pack()
+l3.pack()
+t2.pack()
+b.pack()
+frame.mainloop()
+
+
+from tkinter import *
+from tkinter import messagebox
+frame = Tk()
+frame.geometry("500x300")
+frame.title("Main Frame")
+l1 = Label(frame,text="Main Frame",font=('Arial',30),fg="red")
+l2 = Label(frame,text="Enter Email")
+l3 = Label(frame,text="Enter Password")
+t1 = Entry(frame,width=20)
+t2 = Entry(frame,width=30,show="*")
+def Test():
+    Email = t1.get()
+    Pass = t2.get()
+    if(Email == "Ducat@gmail.com" and Pass=="1234"):
+        messagebox.showinfo("Information","Login")
+        frame1 = Toplevel()
+        frame1.mainloop()
+    else:
+        messagebox.showinfo("Information","Failed")
+b = Button(frame,text="Click Me",command=Test)
+l1.pack()
+l2.pack()
+t1.pack()
+l3.pack()
+t2.pack()
+b.pack()
+frame.mainloop()
+
+
+from tkinter import *
+from tkinter import messagebox
+frame = Tk()
+frame.geometry("500x300")
+frame.title("Main Frame")
+l1 = Label(frame,text="Main Frame",font=('Arial',30),fg="red")
+l2 = Label(frame,text="Enter Email")
+l3 = Label(frame,text="Enter Password")
+t1 = Entry(frame,width=20)
+t2 = Entry(frame,width=30,show="*")
+def Test():
+    Email = t1.get()
+    Pass = t2.get()
+    if(Email == "Ducat@gmail.com" and Pass=="1234"):
+        messagebox.showinfo("Information","Login")
+        frame1 = Toplevel()
+        button1 = Button(frame1,text="click")
+        button1.pack()
+        frame1.mainloop()
+    else:
+        messagebox.showinfo("Information","Failed")
+b = Button(frame,text="Click Me",command=Test)
+l1.pack()
+l2.pack()
+t1.pack()
+l3.pack()
+t2.pack()
+b.pack()
+frame.mainloop()
+
+from tkinter import *
+from tkinter import messagebox
+frame = Tk()
+frame.geometry("500x300")
+frame.title("Main Frame")
+l1 = Label(frame,text="Main Frame",font=('Arial',30),fg="red")
+l2 = Label(frame,text="Enter Email")
+l3 = Label(frame,text="Enter Password")
+t1 = Entry(frame,width=20)
+t2 = Entry(frame,width=30,show="*")
+def Test():
+    Email = t1.get()
+    Pass = t2.get()
+    if(Email == "Ducat@gmail.com" and Pass=="1234"):
+        messagebox.showinfo("Information","Login")
+        frame1 = Toplevel()
+        button1 = Button(frame1,text="click")
+        button1.pack()
+        frame1.mainloop()
+    else:
+        messagebox.showinfo("Information","Failed")
+b = Button(frame,text="Click Me",command=Test)
+l1.pack()
+l2.place(x=100,y=80)
+t1.place(x=250,y=80)
+l3.place(x=100,y=150)
+t2.place(x=250,y=150)
+b.place(x=200,y=200)
+frame.mainloop()
+
+
+from tkinter import *
+import datetime
+frame = Tk()
+frame.geometry("500x300")
+frame.title("Main Frame")
+l1 = Label(frame,text="Main Frame",font=('Arial',30),fg="red")
+def Show():
+    d = datetime.date.today()
+    l1.config(text=d)
+b = Button(frame,text="Click Me",command=Show)
+l1.pack()
+b.pack()
+frame.mainloop()
+
+---------------------------------------------------------------------
+from tkinter import *
+import datetime
+import webbrowser
+frame = Tk()
+frame.geometry("500x300")
+frame.title("Main Frame")
+l1 = Label(frame,text="Main Frame",font=('Arial',30),fg="red")
+def Show():
+    webbrowser.open("http://www.sbi.com")
+b = Button(frame,text="Connect to Bank",command=Show)
+l1.pack()
+b.pack()
+frame.mainloop()
+
+--------------------------------------------------------------------
+
+
+Joins : To get the data from multiple tables .
+
+
+use ducat
+create table a
+(
+Id int,
+Name varchar(20)
+)
+create table b
+(
+Id int,
+Sal int
+)
+
+insert into a values(1,'a'),(2,'b'),(3,'c')
+insert into b values(1,200),(2,300),(5,600)
+
+select Name,Sal from a  join b on a.Id=b.Id
+select Name,Sal from a left join b on a.Id=b.Id
+select Name,Sal from a right join b on a.Id=b.Id
+select Name,Sal from a cross join b
+
+-------------------------------------------------------------
+Conatraints : Condition that help to check the correctness of the data enter by the user.
+
+not null
+check 
+default
+key 
+
+
+-- constraint
+------------------------------------------------------------------
+
+create table mytable
+(
+	ID int not null,
+	Salary int constraint ch_sal check(Salary < 5000),
+    Desg varchar(20) default 'A+'
+)  
+
+
+
+
